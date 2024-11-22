@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use crossbeam_channel::{Receiver, Sender};
 use wg_controller::Command;
 use wg_network::NodeId;

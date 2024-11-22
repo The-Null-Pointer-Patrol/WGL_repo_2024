@@ -7,3 +7,4 @@ edition = "2021"
 crossbeam-channel = "0.5.13"
 wg_packet = { path = "../wg_packet" }
 wg_network = { path = "../wg_network" }
+wg_config = { path = "../wg_config" }
