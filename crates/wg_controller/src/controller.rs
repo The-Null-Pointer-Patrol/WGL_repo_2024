@@ -1,7 +1,12 @@
 use wg_network::topology::Node;
 
+pub struct SimControllerOptions {
+    pub command_send: HashMap<NodeId, Sender<Command>>,
+    pub command_recv: Receiver<Command>,
+    pub config: Config,
+}
+
 pub trait SimulationController {
-    fn crash(&mut self, crashed: &str);
-    fn spawn_node(&mut self, new_node: Node /*metadata*/);
-    fn message_sent(source: &str, target: &str /*metadata*/);
+    fn new(opt: SimControllerOptions) -> Self;
+    fn run(&mut self);
 }
