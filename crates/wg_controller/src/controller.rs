@@ -3,6 +3,7 @@ use std::collections::HashMap;
 use crossbeam_channel::{Receiver, Sender};
 use wg_config::Config;
 use wg_network::NodeId;
+use wg_packet::Packet;
 
 use crate::Command;
 
