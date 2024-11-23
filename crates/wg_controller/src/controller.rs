@@ -12,6 +12,7 @@ use crate::Command;
 
 pub struct SimControllerOptions {
     pub command_send: HashMap<NodeId, Sender<Command>>,
+    pub packet_send: HashMap<NodeId, Sender<Packet>>,
     pub command_recv: Receiver<Command>,
     pub config: Config,
 }
